@@ -1,0 +1,317 @@
+/* ═══════════════════════════════════════════════════════════════
+   PLANTILLA LANDING PAGE — NEGOCIO LOCAL
+   styles.css
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ──────────────────────────────────────────────────────────────
+   VARIABLES GLOBALES — edita aquí para reskinear la plantilla
+   ────────────────────────────────────────────────────────────── */
+:root {
+  /* Colores de marca (cámbia estos dos y toda la web se actualiza) */
+  --c-primary:       #2563eb;   /* azul principal */
+  --c-primary-dark:  #1d4ed8;   /* azul oscuro hover */
+  --c-accent:        #f97316;   /* naranja acento */
+  --c-accent-dark:   #ea580c;   /* naranja oscuro hover */
+  --c-dark:          #0f172a;   /* fondo hero / nav */
+  --c-success:       #22c55e;   /* verde WhatsApp */
+
+  /* Tipografía */
+  --font-base: 'Inter', sans-serif;
+
+  /* Módulos repetitivos */
+  --radius-card:  1rem;         /* border-radius tarjetas */
+  --shadow-card:  0 4px 24px rgba(0, 0, 0, 0.07);
+  --shadow-hover: 0 24px 48px rgba(0, 0, 0, 0.13);
+
+  /* Overlay del hero (ajusta para más/menos oscuridad sobre la foto) */
+  --hero-overlay-start: rgba(15, 23, 42, 0.88);
+  --hero-overlay-mid:   rgba(30, 58, 95,  0.82);
+  --hero-overlay-end:   rgba(29, 78, 216, 0.72);
+}
+
+/* ── Base ────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── Hero — imagen de fondo + overlay ───────────────────────── */
+/*
+   INSTRUCCIONES IMAGEN HERO:
+   Coloca tu foto en img/hero-bg.webp (o .jpg).
+   Tamaño recomendado: 1920 × 1080 px.
+   Si no existe la imagen, el gradiente CSS actúa como fallback.
+*/
+.hero-bg {
+  /* Fallback si no hay imagen */
+  background: linear-gradient(135deg, var(--c-dark) 0%, #1e3a5f 50%, var(--c-primary-dark) 100%);
+  position: relative;
+}
+
+/* Capa de imagen (oculta si no carga) */
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  /* Empareja con el tiempo del overlay-fade */
+  transition: opacity 0.6s ease;
+}
+
+/* Overlay degradado sobre la imagen */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    var(--hero-overlay-start) 0%,
+    var(--hero-overlay-mid)   50%,
+    var(--hero-overlay-end)   100%
+  );
+}
+
+/* ── Glassmorphism ───────────────────────────────────────────── */
+.glass {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ── Navbar con scroll ───────────────────────────────────────── */
+.nav-scrolled {
+  background: rgba(15, 23, 42, 0.95) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* ── Tarjetas de servicio ────────────────────────────────────── */
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.12);
+}
+
+/* ── Galería: zoom al hover ──────────────────────────────────── */
+.gallery-item:hover img {
+  transform: scale(1.07);
+}
+
+/* ── Línea decorativa bajo títulos de sección ───────────────── */
+.decorated-title::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 4px;
+  background: linear-gradient(90deg, #2563eb, #f97316);
+  margin: 0.9rem auto 0;
+  border-radius: 2px;
+}
+.decorated-title.left::after {
+  margin-left: 0;
+}
+
+/* ── Botón flotante WhatsApp ─────────────────────────────────── */
+.wa-float {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  z-index: 999;
+  animation: wa-pulse 2.5s infinite;
+}
+@keyframes wa-pulse {
+  0%,  100% { box-shadow: 0 0 0  0   rgba(34, 197, 94, 0.55); }
+  50%        { box-shadow: 0 0 0 16px rgba(34, 197, 94, 0);    }
+}
+
+/* ── Tooltip del botón flotante WA ──────────────────────────── */
+.wa-float .wa-tooltip {
+  opacity: 0;
+  transform: translateX(6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+}
+.wa-float:hover .wa-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── Animaciones de entrada (IntersectionObserver) ───────────── */
+.anim-item {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.anim-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Tarjetas de testimonios ─────────────────────────────────── */
+.testimonial-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ── Estrellas de valoración ─────────────────────────────────── */
+.stars {
+  color: #f59e0b;
+  letter-spacing: 0.05em;
+}
+
+/* ── Reducción de movimiento (accesibilidad) ─────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .anim-item,
+  .service-card,
+  .testimonial-card,
+  .gallery-item img,
+  .wa-float {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FORMULARIO DE CONTACTO
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Campo contenedor ────────────────────────────────────────── */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+/* ── Label ───────────────────────────────────────────────────── */
+.form-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #374151;
+  letter-spacing: 0.01em;
+}
+
+/* ── Input / select / textarea ───────────────────────────────── */
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #ffffff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 0.75rem;
+  font-size: 0.9375rem;
+  color: #111827;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+  font-family: inherit;
+}
+
+.form-input::placeholder {
+  color: #9ca3af;
+}
+
+.form-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* Estado inválido (activado solo después de interacción) */
+.form-input.is-invalid {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* Estado válido */
+.form-input.is-valid {
+  border-color: #22c55e;
+}
+
+/* ── Mensaje de error inline ─────────────────────────────────── */
+.form-error {
+  font-size: 0.75rem;
+  color: #ef4444;
+  min-height: 1rem;
+  display: block;
+}
+
+/* ── Estado del formulario (feedback global) ─────────────────── */
+#formStatus.status-success {
+  display: flex !important;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: #f0fdf4;
+  border: 1.5px solid #bbf7d0;
+  color: #166534;
+}
+
+#formStatus.status-error {
+  display: flex !important;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: #fef2f2;
+  border: 1.5px solid #fecaca;
+  color: #991b1b;
+}
+
+/* ── Botón de envío: estado cargando ──────────────────────────── */
+#contactSubmit.loading .fa-paper-plane { display: none; }
+#contactSubmit.loading::before {
+  content: '';
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin-right: 0.5rem;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BOTÓN VOLVER ARRIBA
+   ═══════════════════════════════════════════════════════════════ */
+#backToTop {
+  position: fixed;
+  bottom: 6rem;          /* justo encima del botón de WhatsApp */
+  right: 1.75rem;
+  z-index: 998;
+  width: 2.75rem;
+  height: 2.75rem;
+  background: var(--c-primary);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s ease;
+  pointer-events: none;
+}
+
+#backToTop.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+#backToTop:hover {
+  background: var(--c-primary-dark);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+}

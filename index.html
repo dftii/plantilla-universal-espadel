@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══ SEO LOCAL — Centro de Pádel Burriana ESPADEL ══════════ -->
+
+  <!-- Título optimizado -->
+  <title>Centro de Pádel Burriana ESPADEL · Club de pádel en Burriana | Castellón</title>
+
+  <!-- Meta description: 140-160 caracteres -->
+  <meta name="description"
+        content="Centro de Pádel Burriana ESPADEL — Tu club de pádel en Burriana. Alquiler de pistas de pádel, clases con monitores profesionales y torneos. 4,6 ⭐ en Google (+180 reseñas). Reserva por WhatsApp: 680 75 37 40.">
+
+  <!-- Keywords locales -->
+  <meta name="keywords"
+        content="club de pádel en Burriana, alquiler de pistas de pádel Burriana, pádel Burriana, clases de pádel Burriana, torneos pádel Burriana, ESPADEL, centro deportivo Burriana, Castellón">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.espadelburriana.com/">
+
+  <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+  <meta property="og:type"        content="business.business">
+  <meta property="og:title"       content="Centro de Pádel Burriana ESPADEL · Burriana">
+  <meta property="og:description" content="Tu club de pádel en Burriana. Alquiler de pistas, clases con monitores y torneos. 4,6 ⭐ en Google.">
+  <meta property="og:url"         content="https://www.espadelburriana.com/">
+  <meta property="og:image"       content="https://www.espadelburriana.com/img/og-cover.webp">
+  <meta property="og:locale"      content="es_ES">
+  <meta property="og:site_name"   content="Centro de Pádel ESPADEL Burriana">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Centro de Pádel Burriana ESPADEL · Burriana">
+  <meta name="twitter:description" content="Tu club de pádel en Burriana. Alquiler de pistas, clases con monitores y torneos.">
+  <meta name="twitter:image"       content="https://www.espadelburriana.com/img/og-cover.webp">
+
+  <!-- Datos estructurados Schema.org — SportsActivityLocation -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsActivityLocation",
+    "name": "Centro de Pádel Burriana ESPADEL",
+    "description": "Club de pádel en Burriana con alquiler de pistas, clases con monitores profesionales, organización de partidos y torneos.",
+    "url": "https://www.espadelburriana.com",
+    "telephone": "+34680753740",
+    "image": "https://www.espadelburriana.com/img/og-cover.webp",
+    "priceRange": "€€",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Carr. de Nules, 56",
+      "addressLocality": "Burriana",
+      "addressRegion": "Castellón",
+      "postalCode": "12530",
+      "addressCountry": "ES"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "39.8896",
+      "longitude": "-0.0875"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "08:00",
+        "closes": "23:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.6",
+      "reviewCount": "180",
+      "bestRating": "5"
+    },
+    "sameAs": [
+      "https://facebook.com/espadelburriana",
+      "https://instagram.com/espadelburriana"
+    ]
+  }
+  </script>
+
+  <!-- Favicon (reemplaza con tu icono real) -->
+  <link rel="icon"             href="img/favicon.ico">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+  <!-- Google Fonts: Inter (preconnect reduce tiempo de carga) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN + configuración de paleta -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            brand:  { 50:'#eff6ff', 100:'#dbeafe', 500:'#3b82f6',
+                      600:'#2563eb', 700:'#1d4ed8', 800:'#1e3a8a', 900:'#0f172a' },
+            accent: { 400:'#fb923c', 500:'#f97316', 600:'#ea580c' }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Estilos propios (separados del HTML) -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="font-sans antialiased bg-white text-gray-800">
+
+  <!-- ═══════════════════════════════════════════
+       NAVEGACIÓN
+  ═══════════════════════════════════════════ -->
+  <nav id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300 py-4">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+
+      <!-- Logo / nombre -->
+      <a href="#inicio" class="text-white font-extrabold text-xl tracking-tight">
+        <span class="text-orange-400">ESPADEL</span>
+      </a>
+
+      <!-- Menú desktop -->
+      <div class="hidden md:flex items-center gap-7">
+        <a href="#servicios"   class="text-white/75 hover:text-orange-400 text-sm font-medium transition-colors">Servicios</a>
+        <a href="#galeria"     class="text-white/75 hover:text-orange-400 text-sm font-medium transition-colors">Galería</a>
+        <a href="#nosotros"    class="text-white/75 hover:text-orange-400 text-sm font-medium transition-colors">Nosotros</a>
+        <a href="#testimonios" class="text-white/75 hover:text-orange-400 text-sm font-medium transition-colors">Reseñas</a>
+        <a href="#contacto"    class="text-white/75 hover:text-orange-400 text-sm font-medium transition-colors">Contacto</a>
+        <a href="https://wa.me/34680753740?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20pista%20en%20ESPADEL"
+           target="_blank"
+           class="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-full text-sm font-semibold transition-all shadow-lg">
+          <i class="fab fa-whatsapp mr-1.5"></i>Reservar
+        </a>
+      </div>
+
+      <!-- Botón hamburguesa (móvil) -->
+      <button id="menuBtn" class="md:hidden text-white p-2 rounded-lg hover:bg-white/10" aria-label="Menú">
+        <i class="fas fa-bars text-xl" id="menuIcon"></i>
+      </button>
+    </div>
+
+    <!-- Menú móvil desplegable -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-white/15 mt-4">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col gap-4">
+        <a href="#servicios"   class="text-white/80 hover:text-orange-400 font-medium transition-colors">Servicios</a>
+        <a href="#galeria"     class="text-white/80 hover:text-orange-400 font-medium transition-colors">Galería</a>
+        <a href="#nosotros"    class="text-white/80 hover:text-orange-400 font-medium transition-colors">Nosotros</a>
+        <a href="#testimonios" class="text-white/80 hover:text-orange-400 font-medium transition-colors">Reseñas</a>
+        <a href="#contacto"    class="text-white/80 hover:text-orange-400 font-medium transition-colors">Contacto</a>
+        <a href="https://wa.me/34680753740?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20pista%20en%20ESPADEL"
+           target="_blank"
+           class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-xl font-semibold w-fit transition-all">
+          <i class="fab fa-whatsapp text-lg"></i>Reservar pista
+        </a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section id="inicio" class="hero-bg min-h-screen flex items-center relative overflow-hidden">
+
+    <!-- Imagen de fondo del hero
+         INSTRUCCIONES: coloca tu foto en img/hero-bg.webp (1920×1080 px recomendado).
+         Si la foto no existe, el gradiente CSS actúa como fallback automático. -->
+    <div class="hero-photo">
+      <img src="img/hero-bg.webp"
+           alt="" role="presentation"
+           fetchpriority="high"
+           width="1920" height="1080"
+           onerror="this.closest('.hero-photo').style.display='none'">
+      <div class="hero-overlay"></div>
+    </div>
+
+    <!-- Destellos decorativos (sobre el overlay, bajo el contenido) -->
+    <div class="absolute -top-32 -right-32 w-[500px] h-[500px] bg-blue-400/10 rounded-full blur-3xl pointer-events-none z-[1]"></div>
+    <div class="absolute -bottom-32 -left-32 w-[400px] h-[400px] bg-orange-400/10 rounded-full blur-3xl pointer-events-none z-[1]"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-36 relative z-10 w-full">
+      <div class="max-w-3xl">
+
+        <!-- Logo del negocio
+             INSTRUCCIONES: sustituye img/logo.png por tu logo real.
+             Recomendado: formato WebP o SVG con fondo transparente. -->
+        <div class="mb-8">
+          <img src="img/logo.png"
+               alt="Logo Centro de Pádel ESPADEL Burriana"
+               width="80" height="80"
+               onerror="this.style.display='none'"
+               class="w-20 h-20 object-contain rounded-2xl shadow-lg
+                      bg-white/10 p-2 border border-white/20">
+        </div>
+
+        <!-- Etiqueta superior -->
+        <span class="inline-flex items-center gap-2 bg-orange-500/20 text-orange-300 text-sm font-semibold px-4 py-1.5 rounded-full mb-7 border border-orange-400/30">
+          <i class="fas fa-map-pin text-xs"></i>
+          Burriana, Castellón · Club de Pádel
+        </span>
+
+        <!-- Título principal -->
+        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-tight mb-5">
+          Centro de Pádel<br>
+          <span class="text-orange-400">Burriana ESPADEL</span>
+        </h1>
+
+        <!-- Eslogan -->
+        <p class="text-xl sm:text-2xl text-blue-100 font-light mb-4">
+          Tu club de pádel en Burriana
+        </p>
+
+        <!-- Descripción breve -->
+        <p class="text-blue-200/75 text-lg leading-relaxed mb-10 max-w-2xl">
+          Pistas en perfecto estado, monitores profesionales y el mejor ambiente
+          para jugadores de todos los niveles. Alquila tu pista y empieza a jugar hoy mismo.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-wrap gap-4 mb-16">
+          <a href="https://wa.me/34680753740?text=Hola%2C%20quiero%20reservar%20una%20pista%20en%20ESPADEL"
+             target="_blank"
+             class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-orange-500/30 hover:-translate-y-0.5 transition-all">
+            <i class="fas fa-calendar-check mr-2"></i>Reservar pista
+          </a>
+          <a href="#servicios"
+             class="border-2 border-white/30 hover:border-orange-400 hover:bg-white/5 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all">
+            Ver servicios
+          </a>
+        </div>
+
+        <!-- Estadísticas -->
+        <div class="grid grid-cols-3 gap-4 max-w-sm">
+          <div class="glass rounded-2xl p-4 text-center">
+            <div class="text-3xl font-black text-orange-400"
+                 data-count-to="180" data-suffix="+">+180</div>
+            <div class="text-blue-200 text-xs mt-1 leading-tight">Reseñas en<br>Google</div>
+          </div>
+          <div class="glass rounded-2xl p-4 text-center">
+            <div class="text-3xl font-black text-orange-400"
+                 data-count-to="6" data-suffix="">6</div>
+            <div class="text-blue-200 text-xs mt-1 leading-tight">Pistas de<br>pádel</div>
+          </div>
+          <div class="glass rounded-2xl p-4 text-center">
+            <div class="text-3xl font-black text-orange-400">4,6★</div>
+            <div class="text-blue-200 text-xs mt-1 leading-tight">Valoración<br>Google</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Indicador de scroll -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/40 animate-bounce">
+      <i class="fas fa-chevron-down text-xl"></i>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SERVICIOS
+  ═══════════════════════════════════════════ -->
+  <section id="servicios" class="py-24 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Encabezado -->
+      <div class="text-center mb-16">
+        <span class="text-orange-500 font-semibold text-sm uppercase tracking-widest">Qué ofrecemos</span>
+        <h2 class="decorated-title text-4xl font-bold text-gray-900 mt-2">Nuestros Servicios</h2>
+        <p class="text-gray-500 mt-6 max-w-2xl mx-auto text-lg leading-relaxed">
+          Todo lo que necesitas para disfrutar del pádel en Burriana: desde el alquiler de pistas
+          hasta clases con monitores profesionales y torneos organizados.
+        </p>
+      </div>
+
+      <!-- Grid de servicios -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+
+        <!-- ── Servicio 1 ── -->
+        <div class="service-card anim-item bg-white rounded-2xl p-8 shadow-sm border border-gray-100 group">
+          <div class="w-14 h-14 bg-blue-50 group-hover:bg-blue-600 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300">
+            <i class="fas fa-table-tennis-paddle-ball text-2xl text-blue-600 group-hover:text-white transition-colors duration-300"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Alquiler de Pistas</h3>
+          <p class="text-gray-500 leading-relaxed">
+            Pistas de pádel en perfecto estado disponibles para reservar por horas.
+            Iluminación completa para jugar de día y de noche hasta las 23:00 h.
+          </p>
+          <div class="mt-6 flex items-center gap-1.5 text-blue-600 group-hover:text-orange-500 font-semibold text-sm transition-colors">
+            Reservar ahora <i class="fas fa-arrow-right text-xs"></i>
+          </div>
+        </div>
+
+        <!-- ── Servicio 2 ── -->
+        <div class="service-card anim-item bg-white rounded-2xl p-8 shadow-sm border border-gray-100 group">
+          <div class="w-14 h-14 bg-orange-50 group-hover:bg-orange-500 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300">
+            <i class="fas fa-chalkboard-user text-2xl text-orange-500 group-hover:text-white transition-colors duration-300"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Clases de Pádel</h3>
+          <p class="text-gray-500 leading-relaxed">
+            Clases individuales y grupales con monitores titulados. Adaptadas a todos
+            los niveles, desde iniciación hasta perfeccionamiento de técnica avanzada.
+          </p>
+          <div class="mt-6 flex items-center gap-1.5 text-blue-600 group-hover:text-orange-500 font-semibold text-sm transition-colors">
+            Más información <i class="fas fa-arrow-right text-xs"></i>
+          </div>
+        </div>
+
+        <!-- ── Servicio 3 ── -->
+        <div class="service-card anim-item bg-white rounded-2xl p-8 shadow-sm border border-gray-100 group">
+          <div class="w-14 h-14 bg-green-50 group-hover:bg-green-600 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300">
+            <i class="fas fa-users text-2xl text-green-600 group-hover:text-white transition-colors duration-300"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Organización de Partidos</h3>
+          <p class="text-gray-500 leading-relaxed">
+            Te ayudamos a encontrar pareja o rival según tu nivel. Fácil, rápido y
+            con el mejor ambiente entre jugadores de toda la comarca.
+          </p>
+          <div class="mt-6 flex items-center gap-1.5 text-blue-600 group-hover:text-orange-500 font-semibold text-sm transition-colors">
+            Apuntarse <i class="fas fa-arrow-right text-xs"></i>
+          </div>
+        </div>
+
+        <!-- ── Servicio 4 ── -->
+        <div class="service-card anim-item bg-white rounded-2xl p-8 shadow-sm border border-gray-100 group">
+          <div class="w-14 h-14 bg-purple-50 group-hover:bg-purple-600 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300">
+            <i class="fas fa-trophy text-2xl text-purple-600 group-hover:text-white transition-colors duration-300"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Torneos y Eventos</h3>
+          <p class="text-gray-500 leading-relaxed">
+            Organizamos torneos internos y eventos deportivos durante todo el año.
+            Compíte, disfruta y vive el pádel con toda la comunidad ESPADEL.
+          </p>
+          <div class="mt-6 flex items-center gap-1.5 text-blue-600 group-hover:text-orange-500 font-semibold text-sm transition-colors">
+            Ver calendario <i class="fas fa-arrow-right text-xs"></i>
+          </div>
+        </div>
+
+      </div><!-- /grid servicios -->
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       GALERÍA
+  ═══════════════════════════════════════════ -->
+  <section id="galeria" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Encabezado -->
+      <div class="text-center mb-16">
+        <span class="text-orange-500 font-semibold text-sm uppercase tracking-widest">Nuestro trabajo</span>
+        <h2 class="decorated-title text-4xl font-bold text-gray-900 mt-2">Nuestras Pistas</h2>
+        <p class="text-gray-500 mt-6 max-w-2xl mx-auto text-lg leading-relaxed">
+          Echa un vistazo a las instalaciones. Pistas de pádel en excelente estado,
+          iluminadas y listas para que disfrutes del juego a cualquier hora.
+        </p>
+      </div>
+
+      <!--
+        INSTRUCCIONES GALERÍA:
+        · Reemplaza las URLs de Unsplash por tus imágenes reales en formato WebP.
+        · Añade alt descriptivos para SEO y accesibilidad.
+        · width/height evitan el CLS (Cumulative Layout Shift).
+        · Puedes añadir o quitar bloques .gallery-item según necesites.
+      -->
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+
+        <!-- Imagen grande -->
+        <div class="gallery-item anim-item col-span-2 md:col-span-1 md:row-span-2 overflow-hidden rounded-2xl bg-gray-200 h-64 md:h-auto">
+          <img src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=600&h=700&fit=crop&fm=webp"
+               alt="Pista de pádel interior en el club ESPADEL Burriana"
+               loading="lazy" decoding="async" width="600" height="700"
+               class="w-full h-full object-cover transition-transform duration-500">
+        </div>
+
+        <div class="gallery-item anim-item overflow-hidden rounded-2xl bg-gray-200 h-40 sm:h-52">
+          <img src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=500&h=400&fit=crop&fm=webp"
+               alt="Jugadores de pádel en partido en Burriana"
+               loading="lazy" decoding="async" width="500" height="400"
+               class="w-full h-full object-cover transition-transform duration-500">
+        </div>
+
+        <div class="gallery-item anim-item overflow-hidden rounded-2xl bg-gray-200 h-40 sm:h-52">
+          <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=500&h=400&fit=crop&fm=webp"
+               alt="Monitor de pádel dando clase en ESPADEL"
+               loading="lazy" decoding="async" width="500" height="400"
+               class="w-full h-full object-cover transition-transform duration-500">
+        </div>
+
+        <div class="gallery-item anim-item overflow-hidden rounded-2xl bg-gray-200 h-40 sm:h-52">
+          <img src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?w=500&h=400&fit=crop&fm=webp"
+               alt="Pistas de pádel exterior iluminadas en Burriana"
+               loading="lazy" decoding="async" width="500" height="400"
+               class="w-full h-full object-cover transition-transform duration-500">
+        </div>
+
+        <div class="gallery-item anim-item overflow-hidden rounded-2xl bg-gray-200 h-40 sm:h-52">
+          <img src="https://images.unsplash.com/photo-1571190900082-0d4a0218f9d4?w=500&h=400&fit=crop&fm=webp"
+               alt="Torneo de pádel en el centro deportivo ESPADEL"
+               loading="lazy" decoding="async" width="500" height="400"
+               class="w-full h-full object-cover transition-transform duration-500">
+        </div>
+
+        <div class="gallery-item anim-item overflow-hidden rounded-2xl bg-gray-200 h-40 sm:h-52">
+          <img src="https://images.unsplash.com/photo-1598136490929-292a0a7890c2?w=500&h=400&fit=crop&fm=webp"
+               alt="Ambiente social en el club de pádel ESPADEL Burriana"
+               loading="lazy" decoding="async" width="500" height="400"
+               class="w-full h-full object-cover transition-transform duration-500">
+        </div>
+
+      </div><!-- /grid galería -->
+
+      <div class="text-center mt-10">
+        <a href="https://wa.me/34680753740?text=Hola%2C%20quiero%20reservar%20una%20pista%20en%20ESPADEL"
+           target="_blank"
+           class="inline-flex items-center gap-2 border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white px-8 py-3.5 rounded-xl font-semibold transition-all">
+          <i class="fab fa-whatsapp text-lg"></i>
+          Reservar pista por WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SOBRE NOSOTROS
+  ═══════════════════════════════════════════ -->
+  <section id="nosotros" class="py-24 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+        <!-- Imagen -->
+        <div class="relative anim-item">
+          <div class="rounded-2xl overflow-hidden shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=700&h=520&fit=crop&fm=webp"
+                 alt="Instalaciones del Centro de Pádel ESPADEL en Burriana"
+                 loading="lazy" decoding="async" width="700" height="520"
+                 class="w-full h-96 lg:h-[440px] object-cover">
+          </div>
+          <!-- Badge flotante -->
+          <div class="absolute -bottom-5 -right-5 bg-white rounded-2xl shadow-xl p-5 hidden sm:flex items-center gap-4">
+            <div class="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-award text-white text-xl"></i>
+            </div>
+            <div>
+              <div class="font-bold text-gray-900 text-base">4,6 ⭐ en Google</div>
+              <div class="text-gray-500 text-sm">+180 reseñas verificadas</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contenido -->
+        <div class="anim-item">
+          <span class="text-orange-500 font-semibold text-sm uppercase tracking-widest">Quiénes somos</span>
+          <h2 class="decorated-title left text-4xl font-bold text-gray-900 mt-2">
+            Sobre Nosotros
+          </h2>
+
+          <p class="text-gray-600 text-lg leading-relaxed mt-8 mb-5">
+            En ESPADEL llevamos años siendo el punto de encuentro del pádel en Burriana.
+            Contamos con múltiples pistas en perfecto estado, monitores titulados y un ambiente
+            que engancha tanto a principiantes como a jugadores con experiencia.
+          </p>
+          <p class="text-gray-500 leading-relaxed mb-10">
+            Nuestra misión es que cada persona que entre por nuestras puertas se sienta
+            bienvenida, disfrute del juego y vuelva. Por eso cuidamos cada detalle:
+            del mantenimiento de las pistas a la organización de los partidos.
+          </p>
+
+          <!-- Lista de valores / diferenciales -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fas fa-check text-green-600 text-[10px]"></i>
+              </div>
+              <span class="text-gray-700 text-sm">Pistas iluminadas hasta las 23:00 h</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fas fa-check text-green-600 text-[10px]"></i>
+              </div>
+              <span class="text-gray-700 text-sm">Monitores titulados para todos los niveles</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fas fa-check text-green-600 text-[10px]"></i>
+              </div>
+              <span class="text-gray-700 text-sm">Organización de partidos y torneos</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fas fa-check text-green-600 text-[10px]"></i>
+              </div>
+              <span class="text-gray-700 text-sm">4,6 ⭐ con más de 180 reseñas en Google</span>
+            </div>
+          </div>
+
+          <a href="https://wa.me/34680753740?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20ESPADEL"
+             target="_blank"
+             class="inline-flex items-center gap-2.5 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-base shadow-lg hover:shadow-green-500/30 hover:-translate-y-0.5 transition-all">
+            <i class="fab fa-whatsapp text-xl"></i>
+            Habla con nosotros
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       TESTIMONIOS
+  ═══════════════════════════════════════════ -->
+  <section id="testimonios" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Encabezado -->
+      <div class="text-center mb-16">
+        <span class="text-orange-500 font-semibold text-sm uppercase tracking-widest">Lo que dicen</span>
+        <h2 class="decorated-title text-4xl font-bold text-gray-900 mt-2">Opiniones de Clientes</h2>
+        <p class="text-gray-500 mt-6 max-w-2xl mx-auto text-lg leading-relaxed">
+          Más de 180 jugadores ya han valorado ESPADEL con 4,6 estrellas en Google.
+          Lee lo que dicen quienes ya juegan con nosotros.
+        </p>
+      </div>
+
+      <!-- Slider táctil con soporte swipe en móvil -->
+      <div class="relative overflow-hidden">
+
+        <div id="testimonialsTrack"
+             class="flex transition-transform duration-500 ease-in-out"
+             style="will-change: transform;">
+
+          <!-- Testimonio 1 -->
+          <div class="testimonial-card min-w-full px-2 sm:px-8">
+            <div class="bg-gray-50 rounded-2xl p-8 md:p-10 max-w-2xl mx-auto border border-gray-100">
+              <div class="stars text-xl mb-4">★★★★★</div>
+              <blockquote class="text-gray-700 text-lg leading-relaxed mb-6 italic">
+                "¡Campos magníficos y muy buen ambiente! Las pistas están siempre en perfecto estado
+                y el trato es inmejorable. 100% recomendable para jugar al pádel en Burriana."
+              </blockquote>
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-orange-400
+                            flex items-center justify-center text-white font-bold text-lg flex-shrink-0">A</div>
+                <div>
+                  <div class="font-bold text-gray-900">Antonio M.</div>
+                  <div class="text-gray-400 text-sm">Jugador habitual · Burriana</div>
+                </div>
+                <div class="ml-auto flex items-center gap-1.5 text-gray-400 text-xs flex-shrink-0">
+                  <i class="fab fa-google text-blue-500"></i> Verificado
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 2 -->
+          <div class="testimonial-card min-w-full px-2 sm:px-8">
+            <div class="bg-gray-50 rounded-2xl p-8 md:p-10 max-w-2xl mx-auto border border-gray-100">
+              <div class="stars text-xl mb-4">★★★★★</div>
+              <blockquote class="text-gray-700 text-lg leading-relaxed mb-6 italic">
+                "Uno de los mejores centros para jugar al pádel en la zona. Gran variedad de pistas,
+                siempre bien mantenidas y el ambiente entre los jugadores es genial."
+              </blockquote>
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-orange-400 to-pink-500
+                            flex items-center justify-center text-white font-bold text-lg flex-shrink-0">M</div>
+                <div>
+                  <div class="font-bold text-gray-900">María L.</div>
+                  <div class="text-gray-400 text-sm">Abonada · Burriana</div>
+                </div>
+                <div class="ml-auto flex items-center gap-1.5 text-gray-400 text-xs flex-shrink-0">
+                  <i class="fab fa-google text-blue-500"></i> Verificado
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 3 -->
+          <div class="testimonial-card min-w-full px-2 sm:px-8">
+            <div class="bg-gray-50 rounded-2xl p-8 md:p-10 max-w-2xl mx-auto border border-gray-100">
+              <div class="stars text-xl mb-4">★★★★★</div>
+              <blockquote class="text-gray-700 text-lg leading-relaxed mb-6 italic">
+                "Muy buen ambiente tanto para jugar como para entrenar. Los monitores son profesionales
+                y se nota la pasión por el pádel. Sin duda el mejor club de pádel en Burriana."
+              </blockquote>
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-green-400 to-teal-500
+                            flex items-center justify-center text-white font-bold text-lg flex-shrink-0">C</div>
+                <div>
+                  <div class="font-bold text-gray-900">Carlos R.</div>
+                  <div class="text-gray-400 text-sm">Alumno de clases · Castellón</div>
+                </div>
+                <div class="ml-auto flex items-center gap-1.5 text-gray-400 text-xs flex-shrink-0">
+                  <i class="fab fa-google text-blue-500"></i> Verificado
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 4 -->
+          <div class="testimonial-card min-w-full px-2 sm:px-8">
+            <div class="bg-gray-50 rounded-2xl p-8 md:p-10 max-w-2xl mx-auto border border-gray-100">
+              <div class="stars text-xl mb-4">★★★★★</div>
+              <blockquote class="text-gray-700 text-lg leading-relaxed mb-6 italic">
+                "Llevo meses jugando en ESPADEL y siempre encuentro alguien de mi nivel.
+                Las instalaciones son de primera y la reserva de pistas es muy sencilla. ¡Lo recomiendo a todos!"
+              </blockquote>
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-indigo-500
+                            flex items-center justify-center text-white font-bold text-lg flex-shrink-0">R</div>
+                <div>
+                  <div class="font-bold text-gray-900">Rosa P.</div>
+                  <div class="text-gray-400 text-sm">Jugadora · Nules</div>
+                </div>
+                <div class="ml-auto flex items-center gap-1.5 text-gray-400 text-xs flex-shrink-0">
+                  <i class="fab fa-google text-blue-500"></i> Verificado
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /track -->
+
+        <!-- Flechas de navegación (visibles solo en desktop) -->
+        <button id="testimPrev"
+                class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1 w-10 h-10 bg-white shadow-lg
+                       rounded-full items-center justify-center text-gray-700 hover:text-blue-600
+                       hover:shadow-xl transition-all hidden sm:flex"
+                aria-label="Testimonio anterior">
+          <i class="fas fa-chevron-left text-sm"></i>
+        </button>
+        <button id="testimNext"
+                class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1 w-10 h-10 bg-white shadow-lg
+                       rounded-full items-center justify-center text-gray-700 hover:text-blue-600
+                       hover:shadow-xl transition-all hidden sm:flex"
+                aria-label="Testimonio siguiente">
+          <i class="fas fa-chevron-right text-sm"></i>
+        </button>
+      </div><!-- /slider wrapper -->
+
+      <!-- Dots indicadores (generados por JS) -->
+      <div id="testimDots" class="flex items-center justify-center gap-2 mt-8"></div>
+
+      <!-- Enlace externo a Google Reviews -->
+      <div class="text-center mt-8">
+        <a href="https://search.google.com/local/reviews?placeid=espadel-burriana"
+           target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 text-gray-500 hover:text-blue-600 transition-colors text-sm">
+          <i class="fab fa-google"></i>
+          Ver todas las reseñas en Google
+          <i class="fas fa-external-link-alt text-xs"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       CONTACTO + MAPA
+  ═══════════════════════════════════════════ -->
+  <section id="contacto" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Encabezado -->
+      <div class="text-center mb-16">
+        <span class="text-orange-500 font-semibold text-sm uppercase tracking-widest">Encuéntranos</span>
+        <h2 class="decorated-title text-4xl font-bold text-gray-900 mt-2">Contacto y Ubicación</h2>
+        <p class="text-gray-500 mt-6 max-w-2xl mx-auto text-lg leading-relaxed">
+          Estamos en Burriana, listos para atenderte.
+          Reserva tu pista, llámanos o escríbenos cuando quieras.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+
+        <!-- ── Info de contacto ─────────────────────────────── -->
+        <div class="flex flex-col gap-4">
+
+          <!-- Teléfono -->
+          <div class="flex items-start gap-4 bg-gray-50 hover:bg-blue-50 rounded-2xl p-5 transition-colors group">
+            <div class="w-11 h-11 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+              <i class="fas fa-phone text-white text-sm"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900 text-sm mb-0.5">Teléfono</h4>
+              <a href="tel:+34680753740" class="text-blue-600 hover:text-blue-800 font-semibold text-lg">680 75 37 40</a>
+              <p class="text-gray-400 text-xs mt-0.5">Abierto todos los días · hasta las 23:00 h</p>
+            </div>
+          </div>
+
+          <!-- WhatsApp -->
+          <div class="flex items-start gap-4 bg-gray-50 hover:bg-green-50 rounded-2xl p-5 transition-colors group">
+            <div class="w-11 h-11 bg-green-500 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+              <i class="fab fa-whatsapp text-white text-lg"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900 text-sm mb-0.5">WhatsApp</h4>
+              <a href="https://wa.me/34680753740?text=Hola%2C%20quiero%20reservar%20una%20pista%20en%20ESPADEL"
+                 target="_blank"
+                 class="text-green-600 hover:text-green-800 font-semibold text-lg">680 75 37 40</a>
+              <p class="text-gray-400 text-xs mt-0.5">Respuesta rápida garantizada</p>
+            </div>
+          </div>
+
+          <!-- Dirección -->
+          <div class="flex items-start gap-4 bg-gray-50 hover:bg-orange-50 rounded-2xl p-5 transition-colors group">
+            <div class="w-11 h-11 bg-orange-500 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+              <i class="fas fa-map-marker-alt text-white text-sm"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900 text-sm mb-0.5">Dirección</h4>
+              <p class="text-gray-700 font-medium">Carr. de Nules, 56</p>
+              <p class="text-gray-500 text-sm">12530, Burriana (Castellón)</p>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="flex items-start gap-4 bg-gray-50 hover:bg-purple-50 rounded-2xl p-5 transition-colors group">
+            <div class="w-11 h-11 bg-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+              <i class="fas fa-envelope text-white text-sm"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900 text-sm mb-0.5">Horario</h4>
+              <a href="tel:+34680753740" class="text-purple-600 hover:text-purple-800 font-semibold">Abierto todos los días</a>
+              <p class="text-gray-400 text-xs mt-0.5">De 8:00 a 23:00 h (con luz)</p>
+            </div>
+          </div>
+
+          <!-- CTA WhatsApp -->
+          <a href="https://wa.me/34680753740?text=Hola%2C%20quiero%20reservar%20una%20pista%20en%20ESPADEL"
+             target="_blank"
+             class="flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white px-6 py-4 rounded-2xl font-bold text-base shadow-lg hover:shadow-green-500/30 hover:-translate-y-0.5 transition-all mt-auto">
+            <i class="fab fa-whatsapp text-2xl"></i>
+            Reservar pista por WhatsApp
+          </a>
+        </div>
+
+        <!-- ── Formulario de contacto ────────────────────────── -->
+        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+          <h3 class="text-xl font-bold text-gray-900 mb-1">Envíanos un mensaje</h3>
+          <p class="text-gray-400 text-sm mb-6">Te responderemos en menos de 24 h.</p>
+
+          <form id="contactForm" novalidate class="flex flex-col gap-4">
+
+            <!-- Nombre -->
+            <div class="form-field">
+              <label for="contactName" class="form-label">Nombre *</label>
+              <input type="text" id="contactName" name="name"
+                     placeholder="Tu nombre completo"
+                     required minlength="2" maxlength="80"
+                     autocomplete="name"
+                     class="form-input">
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+
+            <!-- Email -->
+            <div class="form-field">
+              <label for="contactEmail" class="form-label">Email *</label>
+              <input type="email" id="contactEmail" name="email"
+                     placeholder="tucorreo@ejemplo.com"
+                     required maxlength="120"
+                     autocomplete="email"
+                     class="form-input">
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+
+            <!-- Teléfono (opcional) -->
+            <div class="form-field">
+              <label for="contactPhone" class="form-label">
+                Teléfono <span class="text-gray-400 font-normal">(opcional)</span>
+              </label>
+              <input type="tel" id="contactPhone" name="phone"
+                     placeholder="+34 600 000 000"
+                     maxlength="20"
+                     autocomplete="tel"
+                     class="form-input">
+            </div>
+
+            <!-- Asunto -->
+            <div class="form-field">
+              <label for="contactSubject" class="form-label">Asunto *</label>
+              <select id="contactSubject" name="subject" required class="form-input">
+                <option value="" disabled selected>Selecciona un asunto…</option>
+                <option value="reserva">Reservar pista</option>
+                <option value="clases">Información sobre clases</option>
+                <option value="torneos">Torneos y eventos</option>
+                <option value="otro">Otro</option>
+              </select>
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+
+            <!-- Mensaje -->
+            <div class="form-field">
+              <label for="contactMessage" class="form-label">Mensaje *</label>
+              <textarea id="contactMessage" name="message"
+                        placeholder="¿Quieres reservar, apuntarte a clases o tienes alguna pregunta? Cuéntanos…"
+                        required minlength="10" maxlength="800"
+                        rows="4"
+                        class="form-input resize-none"></textarea>
+              <span class="form-error" aria-live="polite"></span>
+              <span class="form-char-count text-xs text-gray-400 text-right block mt-1">
+                <span id="msgCount">0</span>/800
+              </span>
+            </div>
+
+            <!-- Aviso RGPD -->
+            <div class="flex items-start gap-3">
+              <input type="checkbox" id="contactPrivacy" name="privacy" required
+                     class="mt-1 w-4 h-4 rounded border-gray-300 text-blue-600
+                            focus:ring-blue-500 flex-shrink-0">
+              <label for="contactPrivacy" class="text-gray-500 text-xs leading-snug cursor-pointer">
+                He leído y acepto la
+                <a href="#" class="text-blue-600 hover:underline">política de privacidad</a>
+                y el tratamiento de mis datos para atender mi consulta.*
+              </label>
+            </div>
+            <span class="form-error" id="privacyError" aria-live="polite"></span>
+
+            <!-- Botón de envío -->
+            <button type="submit" id="contactSubmit"
+                    class="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700
+                           disabled:opacity-60 disabled:cursor-not-allowed
+                           text-white px-6 py-4 rounded-xl font-bold text-base
+                           shadow-lg hover:shadow-blue-600/30 hover:-translate-y-0.5
+                           transition-all mt-2">
+              <i class="fas fa-paper-plane"></i>
+              <span id="submitLabel">Enviar mensaje</span>
+            </button>
+
+            <!-- Mensaje de estado (éxito / error) -->
+            <div id="formStatus" class="hidden rounded-xl px-5 py-4 text-sm font-medium" role="alert"></div>
+
+          </form>
+        </div>
+
+      </div><!-- /grid info + form -->
+
+      <!-- ── Google Maps (ancho completo) ──────────────────── -->
+      <div class="rounded-2xl overflow-hidden shadow-xl">
+        <!--
+          INSTRUCCIONES MAPA:
+          1. Ve a maps.google.com y busca tu dirección.
+          2. Compartir → "Insertar un mapa" → copia el src del iframe.
+        -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3079.2!2d-0.0875!3d39.8896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0605b9e5f0f0f0f%3A0x1!2sCarr.%20de%20Nules%2C%2056%2C%2012530%20Burriana%2C%20Castell%C3%B3n!5e0!3m2!1ses!2ses!4v1710000000000!5m2!1ses!2ses"
+          width="100%"
+          height="360"
+          style="border:0; display:block;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Ubicación del Centro de Pádel ESPADEL en Burriana, Carr. de Nules 56">
+        </iframe>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="bg-gray-900 text-white pt-16 pb-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Columnas superiores -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-gray-800">
+
+        <!-- Marca -->
+        <div class="lg:col-span-2">
+          <div class="text-2xl font-black mb-4">
+            <span class="text-orange-400">ESPADEL</span>
+            <span class="text-white text-lg font-medium ml-1">Burriana</span>
+          </div>
+          <p class="text-gray-400 leading-relaxed mb-6 max-w-sm text-sm">
+            Centro deportivo especializado en pádel en Burriana (Castellón). Pistas en excelente estado,
+            monitores profesionales y el mejor ambiente para jugadores de todos los niveles.
+          </p>
+          <!-- Redes sociales -->
+          <div class="flex gap-3 flex-wrap">
+            <a href="https://facebook.com/espadelburriana" target="_blank" rel="noopener" aria-label="Facebook"
+               class="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors">
+              <i class="fab fa-facebook-f text-sm"></i>
+            </a>
+            <a href="https://instagram.com/espadelburriana" target="_blank" rel="noopener" aria-label="Instagram"
+               class="w-10 h-10 bg-gray-800 hover:bg-gradient-to-br hover:from-pink-500 hover:to-orange-400 rounded-lg flex items-center justify-center transition-colors">
+              <i class="fab fa-instagram text-sm"></i>
+            </a>
+            <a href="https://wa.me/34680753740" target="_blank" rel="noopener" aria-label="WhatsApp"
+               class="w-10 h-10 bg-gray-800 hover:bg-green-500 rounded-lg flex items-center justify-center transition-colors">
+              <i class="fab fa-whatsapp text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navegación -->
+        <div>
+          <h4 class="font-bold text-white mb-5 text-xs uppercase tracking-widest">Navegación</h4>
+          <ul class="space-y-3">
+            <li><a href="#inicio"    class="text-gray-400 hover:text-orange-400 transition-colors text-sm">Inicio</a></li>
+            <li><a href="#servicios" class="text-gray-400 hover:text-orange-400 transition-colors text-sm">Servicios</a></li>
+            <li><a href="#galeria"   class="text-gray-400 hover:text-orange-400 transition-colors text-sm">Galería</a></li>
+            <li><a href="#nosotros"    class="text-gray-400 hover:text-orange-400 transition-colors text-sm">Sobre Nosotros</a></li>
+            <li><a href="#testimonios" class="text-gray-400 hover:text-orange-400 transition-colors text-sm">Reseñas</a></li>
+            <li><a href="#contacto"    class="text-gray-400 hover:text-orange-400 transition-colors text-sm">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacto rápido -->
+        <div>
+          <h4 class="font-bold text-white mb-5 text-xs uppercase tracking-widest">Contacto</h4>
+          <ul class="space-y-3.5">
+            <li class="flex items-start gap-2.5 text-gray-400 text-sm">
+              <i class="fas fa-map-marker-alt text-orange-400 mt-0.5 flex-shrink-0 w-4 text-center"></i>
+              <span>Carr. de Nules, 56<br>12530, Burriana (Castellón)</span>
+            </li>
+            <li class="flex items-center gap-2.5 text-gray-400 text-sm">
+              <i class="fas fa-phone text-orange-400 flex-shrink-0 w-4 text-center"></i>
+              <a href="tel:+34680753740" class="hover:text-white transition-colors">680 75 37 40</a>
+            </li>
+            <li class="flex items-center gap-2.5 text-gray-400 text-sm">
+              <i class="fas fa-envelope text-orange-400 flex-shrink-0 w-4 text-center"></i>
+              <a href="https://wa.me/34680753740" class="hover:text-white transition-colors">WhatsApp: 680 75 37 40</a>
+            </li>
+            <li class="flex items-start gap-2.5 text-gray-400 text-sm">
+              <i class="fas fa-clock text-orange-400 mt-0.5 flex-shrink-0 w-4 text-center"></i>
+              <span>Todos los días<br>8:00 – 23:00 h</span>
+            </li>
+          </ul>
+        </div>
+
+      </div><!-- /columnas -->
+
+      <!-- Barra inferior -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500">
+        <p>&copy; <span id="year"></span> Centro de Pádel Burriana ESPADEL. Todos los derechos reservados.</p>
+        <div class="flex gap-5">
+          <a href="#" class="hover:text-gray-300 transition-colors">Política de privacidad</a>
+          <a href="#" class="hover:text-gray-300 transition-colors">Aviso legal</a>
+          <a href="#" class="hover:text-gray-300 transition-colors">Cookies</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════
+       BOTÓN FLOTANTE WHATSAPP
+  ═══════════════════════════════════════════ -->
+  <a href="https://wa.me/34680753740?text=Hola%2C%20quiero%20reservar%20una%20pista%20en%20ESPADEL"
+     target="_blank"
+     rel="noopener"
+     class="wa-float flex items-center gap-3 bg-green-500 hover:bg-green-600 rounded-full
+            shadow-2xl transition-all hover:scale-105 px-4 py-3"
+     aria-label="Reservar pista por WhatsApp en ESPADEL">
+    <i class="fab fa-whatsapp text-3xl text-white"></i>
+    <span class="wa-tooltip text-white font-semibold text-sm pr-1 hidden sm:inline">¿Hablamos?</span>
+  </a>
+
+
+  <!-- Botón volver arriba -->
+  <button id="backToTop" aria-label="Volver arriba">
+    <i class="fas fa-chevron-up text-sm"></i>
+  </button>
+
+  <!-- JS externo (separado del HTML) -->
+  <script src="script.js"></script>
+
+</body>
+</html>
