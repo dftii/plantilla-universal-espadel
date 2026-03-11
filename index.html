@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Plantilla universal para club de pádel - Espadel" />
+  <title>Espadel – Club de Pádel</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- HEADER / NAV -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">
+        <span class="logo__icon">🎾</span>
+        <span class="logo__text">Espadel</span>
+      </a>
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link">Inicio</a></li>
+          <li><a href="#instalaciones" class="nav__link">Instalaciones</a></li>
+          <li><a href="#servicios" class="nav__link">Servicios</a></li>
+          <li><a href="#torneos" class="nav__link">Torneos</a></li>
+          <li><a href="#contacto" class="nav__link">Contacto</a></li>
+        </ul>
+      </nav>
+      <a href="#reservar" class="btn btn--primary btn--sm">Reservar Pista</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero__overlay"></div>
+    <div class="container hero__content">
+      <h1 class="hero__title">Juega al pádel<br /><span>donde todo es posible</span></h1>
+      <p class="hero__subtitle">
+        Pistas de última generación, clases para todos los niveles y una comunidad apasionada por el pádel.
+      </p>
+      <div class="hero__actions">
+        <a href="#reservar" class="btn btn--primary">Reservar Pista</a>
+        <a href="#servicios" class="btn btn--outline">Ver Servicios</a>
+      </div>
+    </div>
+    <div class="hero__scroll-indicator" aria-hidden="true">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container stats__grid">
+      <div class="stat-card">
+        <span class="stat-card__number" data-target="12">0</span>
+        <span class="stat-card__label">Pistas disponibles</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__number" data-target="1500">0</span>
+        <span class="stat-card__label">Socios activos</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__number" data-target="8">0</span>
+        <span class="stat-card__label">Profesores titulados</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__number" data-target="20">0</span>
+        <span class="stat-card__label">Años de experiencia</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTALACIONES -->
+  <section class="section instalaciones" id="instalaciones">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">Nuestras Instalaciones</h2>
+        <p class="section__subtitle">
+          Disfruta de las mejores pistas cubiertas y al aire libre, con iluminación LED de alta eficiencia.
+        </p>
+      </div>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card__icon">🏟️</div>
+          <h3 class="card__title">Pistas Cubiertas</h3>
+          <p class="card__text">
+            6 pistas cubiertas con cristal panorámico, iluminación LED y césped artificial de alta gama.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card__icon">☀️</div>
+          <h3 class="card__title">Pistas Exteriores</h3>
+          <p class="card__text">
+            6 pistas al aire libre con iluminación nocturna para que puedas jugar a cualquier hora del día.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🏋️</div>
+          <h3 class="card__title">Gimnasio</h3>
+          <p class="card__text">
+            Zona de fitness equipada con máquinas de última generación para complementar tu entrenamiento.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🚿</div>
+          <h3 class="card__title">Vestuarios</h3>
+          <p class="card__text">
+            Amplios vestuarios con taquillas, duchas y zona de descanso para mayor comodidad.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🍽️</div>
+          <h3 class="card__title">Cafetería</h3>
+          <p class="card__text">
+            Zona de restauración con una carta variada de platos, batidos y bebidas energéticas.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🛒</div>
+          <h3 class="card__title">Tienda</h3>
+          <p class="card__text">
+            Todo el material que necesitas: palas, pelotas, ropa deportiva y accesorios de las mejores marcas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="section section--alt servicios" id="servicios">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">Servicios</h2>
+        <p class="section__subtitle">
+          Todo lo que necesitas para disfrutar del pádel al máximo nivel.
+        </p>
+      </div>
+      <div class="servicios__grid">
+        <div class="servicio">
+          <div class="servicio__img servicio__img--clases"></div>
+          <div class="servicio__body">
+            <h3>Clases y Escuela</h3>
+            <p>Aprende con nuestros profesores titulados. Clases individuales, grupales e intensivos para todos los niveles, desde iniciación hasta competición.</p>
+            <ul>
+              <li>Clases individuales</li>
+              <li>Grupos reducidos (máx. 4 jugadores)</li>
+              <li>Escuela infantil y juvenil</li>
+              <li>Cursos intensivos de verano</li>
+            </ul>
+            <a href="#contacto" class="btn btn--secondary">Más información</a>
+          </div>
+        </div>
+        <div class="servicio servicio--reverse">
+          <div class="servicio__img servicio__img--liga"></div>
+          <div class="servicio__body">
+            <h3>Ligas Internas</h3>
+            <p>Participa en nuestra liga interna mensual y compite con jugadores de tu mismo nivel. Premios para los ganadores cada temporada.</p>
+            <ul>
+              <li>Categorías por nivel</li>
+              <li>Ranking actualizado en tiempo real</li>
+              <li>Premios y trofeos</li>
+              <li>Formato round-robin garantizado</li>
+            </ul>
+            <a href="#torneos" class="btn btn--secondary">Ver torneos</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TORNEOS -->
+  <section class="section torneos" id="torneos">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">Torneos y Eventos</h2>
+        <p class="section__subtitle">Próximos torneos en los que puedes participar.</p>
+      </div>
+      <div class="torneos__list">
+        <div class="torneo-item">
+          <div class="torneo-item__date">
+            <span class="torneo-item__day">15</span>
+            <span class="torneo-item__month">ABR</span>
+          </div>
+          <div class="torneo-item__info">
+            <h4>Torneo Apertura Primavera</h4>
+            <p>Categorías mixta y masculina · Nivel iniciación y medio</p>
+          </div>
+          <span class="badge badge--open">Inscripción abierta</span>
+          <a href="#contacto" class="btn btn--outline btn--sm">Inscribirse</a>
+        </div>
+        <div class="torneo-item">
+          <div class="torneo-item__date">
+            <span class="torneo-item__day">06</span>
+            <span class="torneo-item__month">MAY</span>
+          </div>
+          <div class="torneo-item__info">
+            <h4>Copa Espadel Open</h4>
+            <p>Todas las categorías · Nivel avanzado y competición</p>
+          </div>
+          <span class="badge badge--soon">Próximamente</span>
+          <a href="#contacto" class="btn btn--outline btn--sm">Más info</a>
+        </div>
+        <div class="torneo-item">
+          <div class="torneo-item__date">
+            <span class="torneo-item__day">20</span>
+            <span class="torneo-item__month">JUN</span>
+          </div>
+          <div class="torneo-item__info">
+            <h4>Torneo de Verano Familiar</h4>
+            <p>Parejas mixtas · Todos los niveles</p>
+          </div>
+          <span class="badge badge--soon">Próximamente</span>
+          <a href="#contacto" class="btn btn--outline btn--sm">Más info</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRECIOS / MEMBRESÍAS -->
+  <section class="section section--alt precios" id="precios">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">Membresías</h2>
+        <p class="section__subtitle">Elige el plan que mejor se adapte a ti.</p>
+      </div>
+      <div class="precios__grid">
+        <div class="precio-card">
+          <div class="precio-card__header">
+            <h3>Básica</h3>
+            <div class="precio-card__price">
+              <span class="precio-card__amount">25</span>
+              <span class="precio-card__currency">€/mes</span>
+            </div>
+          </div>
+          <ul class="precio-card__features">
+            <li>✅ Reserva de pistas con descuento</li>
+            <li>✅ Acceso a vestuarios</li>
+            <li>✅ 1 clase grupal al mes</li>
+            <li>❌ Acceso a gimnasio</li>
+            <li>❌ Torneos internos incluidos</li>
+          </ul>
+          <a href="#contacto" class="btn btn--outline">Empezar</a>
+        </div>
+        <div class="precio-card precio-card--featured">
+          <div class="precio-card__badge">Más popular</div>
+          <div class="precio-card__header">
+            <h3>Premium</h3>
+            <div class="precio-card__price">
+              <span class="precio-card__amount">45</span>
+              <span class="precio-card__currency">€/mes</span>
+            </div>
+          </div>
+          <ul class="precio-card__features">
+            <li>✅ Reserva de pistas con descuento</li>
+            <li>✅ Acceso a vestuarios</li>
+            <li>✅ 4 clases grupales al mes</li>
+            <li>✅ Acceso a gimnasio</li>
+            <li>✅ Torneos internos incluidos</li>
+          </ul>
+          <a href="#contacto" class="btn btn--primary">Empezar</a>
+        </div>
+        <div class="precio-card">
+          <div class="precio-card__header">
+            <h3>Élite</h3>
+            <div class="precio-card__price">
+              <span class="precio-card__amount">75</span>
+              <span class="precio-card__currency">€/mes</span>
+            </div>
+          </div>
+          <ul class="precio-card__features">
+            <li>✅ Reserva de pistas sin coste extra</li>
+            <li>✅ Acceso a vestuarios</li>
+            <li>✅ Clases ilimitadas</li>
+            <li>✅ Acceso a gimnasio</li>
+            <li>✅ Torneos internos incluidos + 1 externo</li>
+          </ul>
+          <a href="#contacto" class="btn btn--outline">Empezar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVAR -->
+  <section class="section reservar" id="reservar">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">Reservar Pista</h2>
+        <p class="section__subtitle">Reserva tu pista de forma rápida y sencilla.</p>
+      </div>
+      <form class="reserva-form" id="reservaForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre completo *</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electrónico *</label>
+            <input type="email" id="email" name="email" placeholder="tu@correo.com" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000" />
+          </div>
+          <div class="form-group">
+            <label for="pista">Tipo de pista *</label>
+            <select id="pista" name="pista" required>
+              <option value="">Selecciona una pista</option>
+              <option value="cubierta">Pista cubierta</option>
+              <option value="exterior">Pista exterior</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fecha">Fecha *</label>
+            <input type="date" id="fecha" name="fecha" required />
+          </div>
+          <div class="form-group">
+            <label for="hora">Hora *</label>
+            <select id="hora" name="hora" required>
+              <option value="">Selecciona una hora</option>
+              <option value="08:00">08:00</option>
+              <option value="09:30">09:30</option>
+              <option value="11:00">11:00</option>
+              <option value="12:30">12:30</option>
+              <option value="16:00">16:00</option>
+              <option value="17:30">17:30</option>
+              <option value="19:00">19:00</option>
+              <option value="20:30">20:30</option>
+              <option value="22:00">22:00</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">Confirmar Reserva</button>
+        <div class="form-message" id="formMessage" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section section--alt contacto" id="contacto">
+    <div class="container contacto__grid">
+      <div class="contacto__info">
+        <h2 class="section__title">Contacto</h2>
+        <p>¿Tienes alguna pregunta? Estamos aquí para ayudarte.</p>
+        <ul class="contacto__list">
+          <li>📍 Calle Pádel 10, 28001 Madrid</li>
+          <li>📞 <a href="tel:+34910000000">+34 910 000 000</a></li>
+          <li>✉️ <a href="mailto:info@espadel.es">info@espadel.es</a></li>
+          <li>🕐 Lun–Vie: 08:00–23:00 · Sáb–Dom: 08:00–22:00</li>
+        </ul>
+        <div class="contacto__social">
+          <a href="#" class="social-link" aria-label="Instagram">Instagram</a>
+          <a href="#" class="social-link" aria-label="Facebook">Facebook</a>
+          <a href="#" class="social-link" aria-label="TikTok">TikTok</a>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="contactNombre">Nombre *</label>
+          <input type="text" id="contactNombre" name="contactNombre" placeholder="Tu nombre" required />
+        </div>
+        <div class="form-group">
+          <label for="contactEmail">Email *</label>
+          <input type="email" id="contactEmail" name="contactEmail" placeholder="tu@correo.com" required />
+        </div>
+        <div class="form-group">
+          <label for="contactMensaje">Mensaje *</label>
+          <textarea id="contactMensaje" name="contactMensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">Enviar Mensaje</button>
+        <div class="form-message" id="contactMessage" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="logo">
+          <span class="logo__icon">🎾</span>
+          <span class="logo__text">Espadel</span>
+        </a>
+        <p>La plantilla universal para tu club de pádel.</p>
+      </div>
+      <div class="footer__links">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#instalaciones">Instalaciones</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#torneos">Torneos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; <span id="year"></span> Espadel. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
